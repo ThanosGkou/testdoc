@@ -1,5 +1,5 @@
 What's New
-=====
+===========
 
 .. _whats_new:
 
