@@ -18,7 +18,7 @@ Recommended for users with zero to little programming skills, users that are not
 
 
 
-.. figure:: exso_xlsm_1.png
+.. figure:: figs/exso_xlsm_1.png
    :scale: 50 %
    :alt: ExSO.xlsm user interface
 
