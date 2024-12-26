@@ -1,7 +1,10 @@
+
+.. include:: substitutions.rst
 ExSO
 ===================================
 
 An analytical framework for the Greek and European Power&Gas, System Operation ("SO") & Market Exchange ("Ex").
+Version |Version|
 
 
 Check out the usage_ section for further information, including
@@ -15,8 +18,8 @@ Contents
 --------
 
 .. toctree::
-
-   installation_
-   usage_
-   api_
+   Installation <installation>
+   Usage <usage>
+   API <api>
+   What's New <whats_new>
    whats_new_
