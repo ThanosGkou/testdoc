@@ -16,6 +16,7 @@ Contents
 
 .. toctree::
 
-   installation
-   usage
-   api
+   installation_
+   usage_
+   api_
+   whats_new_
