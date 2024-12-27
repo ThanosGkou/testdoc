@@ -59,5 +59,57 @@ Database
    :class: with-border
 
 
+Nodes
+------
+Every object of the database is handled by **exso** as a **Node** object. So, the whole database is a Node, but a column of a file of a field of a report of a publisher is also a Node!
+Nodes have some useful attributes that can be further invetigated in the python_api_, but two key concepts are the :code:`.kind` and :code:`.dna` attributes:
+
+* :code:`.kind`:
+    * Can be: 'root', 'publisher', 'report', 'field', 'file', 'property'
+        * 'root': represents the root database directory
+        * 'publisher': represents the root directory of a specific publishing entity
+        * 'report': represents the directory where all historical data are stored for this report type
+        * 'field': represents a directory inside the report directory, containing all data of a specific excel-sheet of the original report category
+        * 'file': represents all data of a specific subfield, of a specific field of a specific report
+        * 'property': represents a column of a specific file, and so on
+* :code:`.dna`: A string that uniquely represents a node through its hierarchy in the database (e.g. for a 'report'-kind Node, it will be: root.<publisher>.<report>)
+
+
+DataBase Tree (api)
+-------------
+* The :code:`exso.Tree` object can be used to query the underlying data of the database.
+
+Locators
+---------
+Node Locators are unique Node identifications. Nodes can be uniquely accessed in more than one ways. The three main node locator types are:
+* DNA locators
+* Path locators
+* Successive children locators
+
+In all three cases, nodes are accessed through a succession chain:
+
+* **root > publisher > reportName > fieldName > fileName** [>columnName]
+
+For better demonstration, we'll use the example of ISP Activations/Redispatch, of a non-schedulued ISP or Integreated Scheduling Process, published by IPTO (report_name = "AdhocISPResults"), only for Hydroelectric Units.
+
+The file is called **"Hydro.csv"** and is located in the directory **"root/admie/AdhocISPResults/ISP_Activations"**. All three methods below will return the desired Node object.
+
+    * DNA Locator
+        :code:`tree['root.admie.adhocispresults.isp_activations.hydro'] # lower/upper case unimportant`
+
+    * Path Locator
+        :code:`tree["C:\path_to_root_database\admie\AdhocISPResults\ISP_Activations\Hydro.csv"] # exact path must be provided`
+
+    * Successive children locators
+        :code:`tree['root']['admie']['AdhocISPResults']['ISP_Activations']['Hydro'] # case sensitive: it accesses the names of the children of each successive node access`
+
+As of exso v1.0, there is also an option for shortcut-locators, if the report's nature allows it:
+    * If a file name is unique in the whole database, you can directly access it, without specifying the whole chain::
+
+        tree['unique_file_name']
+
+    * If a report has only a single file, you can access it quicker through the "fast forward" operator (">>")::
+
+        tree['dam_results.>>']
 
 
