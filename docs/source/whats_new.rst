@@ -1,9 +1,10 @@
 .. _whats_new:
+.. include:: substitutions.rst
+.. highlight:: console
 
 What's New
 =====
 
-.. include:: substitutions.rst
 
 
 Python
@@ -81,9 +82,10 @@ DataBase Node Manipulation
         #new
         node(start_date, end_date, tz='EET', truncate_tz=True)
 
-- Plotting a node as a line or area chart, input argument simplification
+- Plotting a node as a line or area chart, input argument simplification.
     ::
         #old
+
         node.plot(*args, **kwargs, area=bool)
 
         #new
