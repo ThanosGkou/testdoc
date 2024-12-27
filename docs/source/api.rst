@@ -5,13 +5,15 @@ API
 ===
 
 
-To use ExSO, first install it using pip:
+.. _python_api:
+Python API
+"""""""""""
 
-.. code-block:: console
 
-   (.venv) $ pip install exso
 
-.. autosummary::
-   :toctree: generated
 
-    exso
+.. _cli:
+Command Line API
+""""""""""""""""""
+
+
