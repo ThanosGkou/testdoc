@@ -1,7 +1,24 @@
-What's New
-===========
-
 .. _whats_new:
+
+What's New
+=====
+
+.. include:: substitutions.rst
+
+
+Python
+******
+- Support for Python >=3.10 (including 3.13.0)
+
+
+Reports
+******
+- IPTO: ISP Results and ISP Unit Availabilities upgrade
+- HEnEx: Support for Intraday IDA Reports
+
+Documentation
+*************
+- Dedicated documentation page in `Read the Docs <https://docs.readthedocs.io/en/stable/>`_
 
 API
 ***
@@ -15,11 +32,6 @@ General Usage
     >>> exso.Updater(*args, which:str|list|None, exclude: str|list|None, publishers: str|list|None, groups: str|list|None)
 - Report names are now, case insensitive (so, DAM_Results = dam_ReSultS = dam_results)
 - Auto-propose similar report-names in case the inputted report name does not exist
-
-Reports
-"""""""""""""
-- IPTO: ISP Results and ISP Unit Availabilities upgrade
-- HEnEx: Support for Intraday IDA Reports
 
 
 DataBase Tree Access
@@ -42,6 +54,13 @@ DataBase Tree Access
 >>> tree.combine((node1, node2, ..., nodeN))
 
     - There are also options to handle synonymity when combining nodes, etc.
+
+- Support for non-exso csv files in the database
+    - You can now use exso as an api for your own files!
+    - Store your custom csv files "exso_root_database/your_custom_folder_name"
+    - access your files as normal exso.Nodes, and make transformations/visualizations
+>>> tree = exso.Tree(root_base)
+>>> tree['your_custom_folder_name.your_custom_file_paths'].plot(***kwargs)
 
 DataBase Node Manipulation
 """"""""""""""""""""
