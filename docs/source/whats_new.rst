@@ -59,8 +59,10 @@ DataBase Tree Access
     - You can now use exso as an api for your own files!
     - Store your custom csv files "exso_root_database/your_custom_folder_name"
     - access your files as normal exso.Nodes, and make transformations/visualizations
->>> tree = exso.Tree(root_base)
->>> tree['your_custom_folder_name.your_custom_file_paths'].plot(***kwargs)
+      .. code-block::
+
+        tree = exso.Tree(root_base)
+        tree['your_custom_folder_name.your_custom_file_paths'].plot(***kwargs)
 
 DataBase Node Manipulation
 """"""""""""""""""""
@@ -73,12 +75,12 @@ DataBase Node Manipulation
 
 - Improved timezone handling input arguments:
     Now, all you need to do is leave the tz = None, or specify a string-timezone.
->>> old: node(start_date, end_date, tz_pipe = ['UTC', 'EET', 'None'])
->>> new: node(start_date, end_date, tz='EET', truncate_tz=True)
+    >>> old: node(start_date, end_date, tz_pipe = ['UTC', 'EET', 'None'])
+    >>> new: node(start_date, end_date, tz='EET', truncate_tz=True)
 
 - Plotting a node as a line or area chart, input argument simplification"
->>> old: node.plot(*args, **kwargs, area=bool)
->>> new: node.plot(*args, **kwargs, kind = 'line'|'area')
+    >>> old: node.plot(*args, **kwargs, area=bool)
+    >>> new: node.plot(*args, **kwargs, kind = 'line'|'area')
 
 - Support for plotting demand-supply market bids:
 .. figure:: figs/exso_demand_supply_plot.png
