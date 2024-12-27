@@ -1,10 +1,8 @@
-API
-===
 
 .. _api:
 
-
-
+API
+===
 
 
 To use ExSO, first install it using pip:
