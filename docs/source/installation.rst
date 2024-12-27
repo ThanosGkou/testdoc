@@ -33,7 +33,9 @@ Process
 
 .. figure:: figs/exso_xlsm_1.png
    :scale: 50 %
-   :alt: ExSO.xlsm user interface
+   :class: with-border
+
+   ExSO.xlsm user interface
 
 * You can then continue using ExSO through the ExSO.xlsm, which provides an excel-based GUI for the exso API basic functionality
 * Or, use the automatically created virtual environment through your preferred IDE, to directly use the exso API through the command line or an IDE.
