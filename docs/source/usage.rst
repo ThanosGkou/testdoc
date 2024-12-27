@@ -11,8 +11,7 @@ Core Functionalities
 * Build a local database for the greek system
 .. figure:: figs/database_Viz.png
    :scale: 50 %
-   :align: right
-   :class: with-border
+
 * Access, combine, transform, visualize, extract data from the database
 .. figure:: figs/plotly_viz.png
    :scale: 50 %
