@@ -59,7 +59,7 @@ DataBase Tree Access
     - You can now use exso as an api for your own files!
     - Store your custom csv files "exso_root_database/your_custom_folder_name"
     - access your files as normal exso.Nodes, and make transformations/visualizations
-      .. code-block::
+      .. code-block:: python
 
         tree = exso.Tree(root_base)
         tree['your_custom_folder_name.your_custom_file_paths'].plot(***kwargs)
