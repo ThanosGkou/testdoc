@@ -21,7 +21,7 @@ Contents
    :maxdepth: 2
 
    api
-   installation
+   Installation and Upgrade <installation>
    Usage <usage>
    What's New <whats_new>
 
