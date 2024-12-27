@@ -7,7 +7,6 @@ Installation
 
 
 
-.. class:: right
 Installation / Upgrade to ExSO |Version|
 ======================
 It's best to create a dedicated **virtual environment** to install and launch exso.
