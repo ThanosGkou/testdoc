@@ -7,8 +7,8 @@ An analytical framework for the Greek and European Power&Gas, System Operation (
 Version |version|
 
 
-Check out the :ref:`usage`_ section for further information, including
-how to `install <installation_>`_  the project.
+Check out the :ref:`usage` section for further information, including
+how to :ref:`install <installation>`  the project.
 
 .. note::
 
@@ -24,4 +24,4 @@ Contents
    installation
    Usage <usage>
    What's New <whats_new>
-   
+
