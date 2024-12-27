@@ -1,6 +1,6 @@
 
 .. include:: substitutions.rst
-ExSO
+|logo|
 ===================================
 
 An analytical framework for the Greek and European Power&Gas, System Operation ("SO") & Market Exchange ("Ex").
