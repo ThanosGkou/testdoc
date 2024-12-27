@@ -4,7 +4,7 @@ ExSO
 ===================================
 
 An analytical framework for the Greek and European Power&Gas, System Operation ("SO") & Market Exchange ("Ex").
-Version |Version|
+Version |version|
 
 
 Check out the usage_ section for further information, including
@@ -18,9 +18,10 @@ Contents
 --------
 
 .. toctree::
+   :maxdepth: 2
 
-   installation
-   usage
    api
-   whats_new
-   
+   Installation <installation_>
+   Usage <usage>
+   What's New <whats_new>
+   whats_new_
