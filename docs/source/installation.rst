@@ -62,6 +62,5 @@ Important
 Migration to ExSo |version|
 ----------------------------
 - The Migration is as simple as the first-time installation.
-- In case of a pre-existing database created with previous versions of ExSO, a newer version of ExSO may automatically delete and rebuild some of the database files to ensure the smooth data migration.
+- In case of a pre-existing database created with previous versions of ExSO, a newer version of ExSO may automatically delete (actually relocate to a local backup that will be previewed during execution) and rebuild some of the database files to ensure the smooth data migration.
 
-   
