@@ -14,7 +14,7 @@ Core Functionalities
 
 * Access, combine, transform, visualize, extract data from the database
 .. figure:: figs/plotly_viz.png
-   :scale: 50 %
+   :scale: 20 %
    :class: with-border
 
 There are three complementary and not necessarily contradictory ways of using ExSO:
