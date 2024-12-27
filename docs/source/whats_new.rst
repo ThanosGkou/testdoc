@@ -1,6 +1,5 @@
 .. _whats_new:
 .. include:: substitutions.rst
-.. highlight:: console
 
 What's New
 =====
@@ -26,40 +25,48 @@ API
 
 General Usage
 """""""""""""
-- Provision of the ExSO.xlsm high-level api, which is an excel-based GUI to install and exso
-- Reports Selection and Filtering
-    - More intuitive and powerful filtering:
-    - You can combine multiple filters to select which reports to include, which to exclude, from which publishers, and which groups, in an intersectional manner
-    >>> exso.Updater(*args, which:str|list|None, exclude: str|list|None, publishers: str|list|None, groups: str|list|None)
-- Report names are now, case insensitive (so, DAM_Results = dam_ReSultS = dam_results)
-- Auto-propose similar report-names in case the inputted report name does not exist
+* Provision of the ExSO.xlsm high-level api, which is an excel-based GUI to install and exso
+* Reports Selection and Filtering:
+    * More intuitive and powerful filtering
+    * You can combine multiple filters to select which reports to include, which to exclude, from which publishers, and which groups, in an intersectional manner::
+
+       exso.Updater(*args, which:str|list|None, exclude: str|list|None, publishers: str|list|None, groups: str|list|None)
+* Report names are now, case insensitive:
+    * e.g. DAM_Results = dam_ReSultS = dam_results
+* Auto-propose similar report-names in case the inputted report name does not exist
 
 
 DataBase Tree Access
 """""""""""""""
-- exso Database initialization made simpler:
->>> old: tree = exso.Tree(*args).make_tree()
->>> new: tree = exso.Tree(*args)
+* exso Database initialization made simpler::
 
-- "DNA" locators are case insensitive
+    #old:
+    tree = exso.Tree(*args).make_tree()
+
+    #new:
+    tree = exso.Tree(*args)
+
+* "DNA" locators are case insensitive
     henex.DAM_Results.DAM_Results.Results = henex.dam_results.dam_results.results
-- Support for shorter dna chains, if the report supports it:
-    - If a file name is unique in the whole database, you can directly access it, without specifying the whole chain:
-    >>> tree['unique_file_name']
+* Support for shorter dna chains, if the report supports it:
+    * If a file name is unique in the whole database, you can directly access it, without specifying the whole chain::
 
-    - If a report has only a single file, you can access it quicker through the "fast forward" operator (">>")
-    >>> tree['dam_results.>>']
+        tree['unique_file_name']
 
-- In case of entering an invalid DNA, the error message will auto-suggest most similar dna chains to the one you entered.
-- Support for combining nodes :
->>> tree.combine((node1, node2, ..., nodeN))
+    * If a report has only a single file, you can access it quicker through the "fast forward" operator (">>")::
 
-    - There are also options to handle synonymity when combining nodes, etc.
+        tree['dam_results.>>']
 
-- Support for non-exso csv files in the database
-    - You can now use exso as an api for your own files!
-    - Store your custom csv files "exso_root_database/your_custom_folder_name"
-    - access your files as normal exso.Nodes, and make transformations/visualizations
+* In case of entering an invalid DNA, the error message will auto-suggest most similar dna chains to the one you entered.
+* Support for combining nodes::
+
+    tree.combine((node1, node2, ..., nodeN), **kwargs)
+
+
+* Support for non-exso csv files in the database
+    * You can now use exso as an api for your own files!
+    * Store your custom csv files :file:`exso_root_database/your_custom_folder_name`
+    * access your files as normal exso.Nodes, and make transformations/visualizations
       ::
         tree = exso.Tree(root_base)
         tree['your_custom_folder_name.your_custom_file_paths'].plot(***kwargs)
