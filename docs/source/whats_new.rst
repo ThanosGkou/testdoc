@@ -25,7 +25,7 @@ API
 
 General Usage
 """""""""""""
-* Provision of the ExSO.xlsm high-level api, which is an excel-based GUI to install and exso
+* Provision of the |xlsm| high-level api, which is an excel-based GUI to install and exso
 * Reports Selection and Filtering:
     * More intuitive and powerful filtering
     * You can combine multiple filters to select which reports to include, which to exclude, from which publishers, and which groups, in an intersectional manner::
@@ -100,5 +100,7 @@ DataBase Node Manipulation
 - Support for plotting demand-supply market bids:
 .. figure:: figs/exso_demand_supply_plot.png
    :scale: 50 %
+
+
 
 
