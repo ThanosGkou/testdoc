@@ -1,19 +1,19 @@
 .. _installation:
 
-************
+*************
 Installation
-************
+*************
 .. include:: substitutions.rst
 
 
 
-Installation / Upgrade to ExSO |Version|
-======================
+Installation / Upgrade to ExSO |version|
+========================================
 It's best to create a dedicated **virtual environment** to install and launch exso.
 
 
 Auto-Mode
----------
+----------
 
 Recommended for users:
 
@@ -41,7 +41,7 @@ Process
 
 
 Manual-Mode
------------
+------------
 * Install Python >= 3.10
 * Create a new virtual environment (Or, use an existing one if you know what you're doing)
 * Install exso in this virtual environment:
@@ -49,16 +49,16 @@ Manual-Mode
 
 
 Important
----------
+----------
 - ExSO comes with default formats:
     - List separator: ','
     - Decimal point: '.'
 - If your system formats are different, declare it before starting using ExSO:
     - Through ExSO.xlsm (one click)
-    - Through the Command-Line or the exso API (see usage_ section)
+    - Through the Command-Line or the exso API (see :ref:`usage` section)
 
 Migration to ExSo |version|
----------------------------
+----------------------------
 - The Migration is as simple as the first-time installation.
 - In case of a pre-existing database created with previous versions of ExSO, a newer version of ExSO may automatically delete and rebuild some of the database files to ensure the smooth data migration.
 
