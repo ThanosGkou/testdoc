@@ -45,17 +45,17 @@ Datalake
 ---------
 * The datalake is a local directory created by **exso**, containing all report files as downloaded from the publishers
 * The general structure is: :menuselection:`root --> Publisher --> ReportName --> Raw Report Files`
-* The general structure of each Report File is: :menuselection:`file --> sheets --> fields --> properties`
+* The general structure of each Report File is: :menuselection:`file --> sheets (fields) --> subfields --> properties`
 .. figure:: figs/datalake_report_table.png
-   :scale: 100 %
+   :scale: 50 %
    :class: with-border
 
 Database
 ---------
 * The database is a local directory created by **exso**, containing a high-quality, continuous version of the raw report files
-* The general structure is: :menuselection:`root --> Publisher --> ReportName --> Field (.csv) --> Property (file-columns)`
+* The general structure is: :menuselection:`root --> Publisher --> ReportName --> Field (directory) --> Subfield (.csv) --> Property (file-columns)`
 .. figure:: figs/database_report_table.png
-   :scale: 100 %
+   :scale: 50 %
    :class: with-border
 
 
