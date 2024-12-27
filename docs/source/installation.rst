@@ -37,7 +37,7 @@ Process
 
    ExSO.xlsm user interface
 
-* You can then continue using ExSO through the ExSO.xlsm, which provides an excel-based GUI for the exso API basic functionality
+* You can then continue using ExSO through |xlsm|, which provides an excel-based GUI for the exso API basic functionality
 * Or, use the automatically created virtual environment through your preferred IDE, to directly use the exso API through the command line or an IDE.
 
 
@@ -64,3 +64,4 @@ Migration to ExSo |version|
 - The Migration is as simple as the first-time installation.
 - In case of a pre-existing database created with previous versions of ExSO, a newer version of ExSO may automatically delete and rebuild some of the database files to ensure the smooth data migration.
 
+   
